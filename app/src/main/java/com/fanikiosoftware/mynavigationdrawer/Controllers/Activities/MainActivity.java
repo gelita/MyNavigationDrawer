@@ -41,6 +41,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         this.configureToolBar();
         this.configureDrawerLayout();
         this.configureNavigationView();
+        this.showFirstFragment();
+    }
+
+    //Show first fragment when activity is created
+    private void showFirstFragment(){
+        Fragment visibleFragment = getSupportFragmentManager().findFragmentById(R.id.activity_main_frame_layout);
+        if (visibleFragment == null){
+            //Show News Fragment
+            this.showFragment(FRAGMENT_NEWS);
+            //Mark menu item corresponding to NewsFragment as 'selected'
+            this.navigationView.getMenu().getItem(0).setChecked(true);
+        }
     }
 
     @Override
@@ -73,7 +85,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         this.drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
-
 
     // ---------------------
     // CONFIGURATION

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.fanikiosoftware.mynavigationdrawer.Controllers.Fragments.ProfileFragment"
     android:gravity="center"
-    android:background="#EDD9CF">
+    android:background="#00BCD4">
 
     <TextView
         android:id="@+id/fragment_page_news_title"
